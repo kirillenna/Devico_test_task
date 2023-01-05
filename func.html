@@ -1,0 +1,14 @@
+<script>
+  let request = new XMLHttpRequest();
+  request.open("GET", "animals.json", false);
+  request.send(null);
+  var animals = JSON.parse(request.responseText);
+
+  const numOfPigsLegs = animals.pigs * 4;
+  const numOfChickensLegs = animals.chickens * 2;
+  const numOfCowsLegs = animals.cows * 4;
+
+  const result = numOfChickensLegs + numOfCowsLegs + numOfPigsLegs;
+
+  console.log(result);
+</script>
